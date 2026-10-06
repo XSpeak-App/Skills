@@ -1,0 +1,21 @@
+{
+  "sdk-version": 1,
+  "id": "summary.request",
+  "version": 1,
+  "name": "Summary",
+  "description": "Computes summary of the conversation",
+  "modes": [
+    "request"
+  ],
+  "context": {
+    "transcript": "full"
+  },
+  "steps": [
+    {
+      "id": "summary",
+      "ui": {
+        "result.title": "Summary"
+      }
+    }
+  ]
+}
