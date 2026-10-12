@@ -1,0 +1,19 @@
+{
+  "sdk-version": 1,
+  "id": "x.shadow",
+  "version": 1,
+  "name": "Shadow",
+  "description": "Suggests what to say",
+  "context": {
+    "transcript": "latest",
+    "statements": 50
+  },
+  "steps": [
+    {
+      "id": "analyze",
+      "ui": {
+        "result.title": "To consider"
+      }
+    }
+  ]
+}
