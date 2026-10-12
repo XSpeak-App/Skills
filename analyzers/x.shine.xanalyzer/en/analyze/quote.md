@@ -1,0 +1,1 @@
+Pick one statement by the other speaker that contains the detected opportunity: the question or statement of uncertainty. Quote it verbatim, without additions. If no opportunity is detected, do not pick a quote.

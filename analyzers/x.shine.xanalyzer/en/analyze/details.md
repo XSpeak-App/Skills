@@ -1,0 +1,1 @@
+A short description of exactly what the detected opportunity is: what the other speaker asked or was uncertain about, and why it is a chance to shine. If no opportunity is detected, leave this field empty.
