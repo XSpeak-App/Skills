@@ -1,6 +1,6 @@
 {
   "sdk-version": 1,
-  "id": "summary.request",
+  "id": "x.summary.request",
   "version": 1,
   "name": "Summary",
   "description": "Computes summary of the conversation",

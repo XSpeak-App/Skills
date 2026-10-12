@@ -1,5 +1,6 @@
 {
   "ids": [
-    "summary.request"
+    "x.summary.request",
+    "x.ally"
   ]
 }

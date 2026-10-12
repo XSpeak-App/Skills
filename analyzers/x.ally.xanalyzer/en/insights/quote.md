@@ -1,0 +1,1 @@
+Pick one statement by the other speaker that best illustrates the result: the line that the strongest item is grounded in. Quote it verbatim, without additions. If the result reports nothing, do not pick a quote.

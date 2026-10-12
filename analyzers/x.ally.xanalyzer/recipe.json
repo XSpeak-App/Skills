@@ -1,0 +1,18 @@
+{
+  "sdk-version": 1,
+  "id": "x.ally",
+  "version": 1,
+  "name": "Ally",
+  "description": "Tells you what in the conversation is in your interest: risks, problems, and opportunities.",
+  "context": {
+    "transcript": "max"
+  },
+  "steps": [
+    {
+      "id": "insights",
+      "ui": {
+        "result.title": "Insights"
+      }
+    }
+  ]
+}
