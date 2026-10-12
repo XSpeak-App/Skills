@@ -1,6 +1,7 @@
 {
   "ids": [
     "x.summary.request",
+    "x.action.items",
     "x.ally",
     "x.shadow",
     "x.shine"

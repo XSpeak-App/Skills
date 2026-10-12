@@ -1,0 +1,1 @@
+Action items as a bullet list: one item per line, each starting with a single dash followed by a space. Each item is a concrete task, commitment, or follow-up, with the owner and any deadline or detail given. If there are no action items, say so briefly.

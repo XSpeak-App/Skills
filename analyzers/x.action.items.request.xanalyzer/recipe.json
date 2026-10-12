@@ -1,0 +1,21 @@
+{
+  "sdk-version": 1,
+  "id": "x.action.items",
+  "version": 1,
+  "name": "Action Items",
+  "description": "Computes action items from the conversation",
+  "modes": [
+    "request"
+  ],
+  "context": {
+    "transcript": "full"
+  },
+  "steps": [
+    {
+      "id": "analyze",
+      "ui": {
+        "result.title": "Action Items"
+      }
+    }
+  ]
+}
