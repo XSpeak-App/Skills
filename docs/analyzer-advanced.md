@@ -69,8 +69,8 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
 
 ```json5
 {
-  "kit-version": "<int>",
-  "version": "<int>",
+  "kit-version": "<int>", // the version of the XSpeak Skills Kit (the internal engine that uses skills)
+  "version": "<int>", // the version of this skill
   "name": "<skill-name>", // used in the AI Actions popup 
   "description": "<skill-description>", // optional, describes what skill is for 
   "modes": [

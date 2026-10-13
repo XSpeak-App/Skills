@@ -18,22 +18,22 @@ analyzers/my.analyzer.xanalyzer/
 
 The minimum recipe, with a single step:
 
-```json
+```json5
 {
-  "kit-version": 1,
-  "version": 1,
-  "name": "My Analyzer",
-  "steps": [
+  "kit-version": 1, // the version of the XSpeak Skills Kit (the internal engine that uses skills)
+  "version": 1, // the version of this skill
+  "name": "My Analyzer", // the display name, shown in the AI Actions popup
+  "steps": [ // the pipeline of steps
     {
-      "id": "my-step"
+      "id": "my-step" // the step's id, its prompts live in en/my-step/
     }
   ]
 }
 ```
 
-- The analyzer id is the folder name without the `.xanalyzer` extension.
+- `kit-version`, `version`, `name`, and `steps` (with each step's `id`) are required.
 - `name` is shown in the AI Actions popup.
-- Everything else (`description`, `modes`, `context`, `verification`, and per-step `ui` / `min.confidence`) is optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
+- `description`, `modes`, `context`, `verification`, and per-step `ui` / `min.confidence` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
 
 ## 3. Add the step prompt files
 
