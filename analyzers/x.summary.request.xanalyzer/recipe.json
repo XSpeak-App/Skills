@@ -1,5 +1,5 @@
 {
-  "sdk-version": 1,
+  "kit-version": 1,
   "version": 1,
   "name": "Summary",
   "description": "Computes summary of the conversation",

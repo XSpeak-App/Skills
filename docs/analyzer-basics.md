@@ -20,7 +20,7 @@ The minimum recipe, with a single step:
 
 ```json
 {
-  "sdk-version": 1,
+  "kit-version": 1,
   "version": 1,
   "name": "My Analyzer",
   "steps": [

@@ -69,7 +69,7 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
 
 ```json5
 {
-  "sdk-version": "<int>",
+  "kit-version": "<int>",
   "version": "<int>",
   "name": "<skill-name>", // used in the AI Actions popup 
   "description": "<skill-description>", // optional, describes what skill is for 
