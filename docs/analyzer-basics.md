@@ -21,7 +21,6 @@ The minimum recipe, with a single step:
 ```json
 {
   "sdk-version": 1,
-  "id": "my.analyzer",
   "version": 1,
   "name": "My Analyzer",
   "steps": [
@@ -32,7 +31,7 @@ The minimum recipe, with a single step:
 }
 ```
 
-- `id` must match the analyzer folder name (without the `.xanalyzer` extension).
+- The analyzer id is the folder name without the `.xanalyzer` extension.
 - `name` is shown in the AI Actions popup.
 - Everything else (`description`, `modes`, `context`, `verification`, and per-step `ui` / `min.confidence`) is optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
 
