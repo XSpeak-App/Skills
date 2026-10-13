@@ -140,7 +140,7 @@ These are the parameters you can use in your prompts:
 - `{{history.last.confidence}}`
 - `{{conversation.transcript}}`
 - `{{conversation.spoken.language}}`
-- `{{conversation.translation.language}}`
+- `{{conversation.transcript.language}}`
 - `{{conversation.context.conversation.type}}`
 
 ## Aggregator parameters

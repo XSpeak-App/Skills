@@ -3,6 +3,7 @@ You receive several action item lists in JSON objects, each covering a consecuti
 You must produce a single action item list for that whole dialog with the exact same structure.
 
 ### RULES
+- Write all fields in {{conversation.transcript.language}}.
 - The result field is a bullet list: one item per line, each item starting with a single dash followed by a space.
 - Do not invent new items.
 - Merge items that describe the same action across inputs into one item.

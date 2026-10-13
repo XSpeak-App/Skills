@@ -3,6 +3,7 @@ You receive several summaries in JSON objects, each covering a consecutive part 
 You must produce a single summary of that whole dialog with the exact same structure.
 
 ### RULES
+- Keep the language of the inputs. Do not translate.
 - Do not invent new facts or items.
 - Preserve names, numbers, dates, and other concrete facts exactly as they appear in the inputs; do not generalize, omit, or replace them with pronouns.
 - Do not reference the inputs (no "the inputs show…").

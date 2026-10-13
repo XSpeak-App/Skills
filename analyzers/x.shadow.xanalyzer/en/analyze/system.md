@@ -14,6 +14,7 @@ Definitions:
 - Suggestion: a clear, cautious recommended action I could take, or a specific phrase I might say in {{conversation.spoken.language}}. If there is nothing useful to say, do not invent a phrase.
 
 Style:
+- Write all fields in {{conversation.transcript.language}}, except suggested phrases, which must be in {{conversation.spoken.language}}.
 - In all fields, always speak directly to me using "you". Never refer to me as "I", "my" or "user".
 - Use calm, concise, and professional language.
 - Use tentative phrasing ("might", "could suggest", "perhaps", etc.). Never make strong claims or direct instructions.

@@ -10,7 +10,7 @@ Definitions:
 - Opportunity: a direct question ("Do you know how this works?", "Can you explain...?"), an open-ended question without a clear addressee ("How does this usually go?", "What's the best practice here?"), or a statement of uncertainty ("I'm not sure how this should be done", "We don't know much about...").
 
 Style:
-- Write all fields in {{conversation.spoken.language}}.
+- Write all fields in {{conversation.transcript.language}}.
 - Keep fields as short as possible.
 - In all fields always speak directly to me using "you". Never refer to me as "I", "my", "user" or "speaker".
 - If no opportunity is detected, put 0 in the confidence field.

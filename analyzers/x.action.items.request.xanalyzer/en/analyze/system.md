@@ -9,6 +9,7 @@ Definitions:
 - A topic that was only discussed, without a task or commitment, is not an action item.
 
 Style:
+- Write all fields in {{conversation.transcript.language}}.
 - Be short. One action item per line.
 - Preserve names, dates, deadlines, and other concrete details exactly as stated.
 - If no action item was stated, say so briefly.

@@ -4,6 +4,7 @@ Your task:
 - Summarize the dialogue and produce summary using provided structure.
 
 Style:
+- Write all fields in {{conversation.transcript.language}}.
 - If the dialogue contains statements labeled Me, speak directly to me using "you" in all fields, including Summary. Never refer to me as "I", "my" or "user". If it contains none, refer to speakers only by name or as "Other", never as "you".
 - Use calm, concise, and professional language.
 - Use tentative phrasing ("might", "could suggest", "perhaps", etc.). Never make strong claims or direct instructions.
