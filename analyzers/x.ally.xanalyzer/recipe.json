@@ -8,10 +8,10 @@
   },
   "steps": [
     {
-      "id": "insights",
-      "ui": {
-        "result.title": "Insights"
-      }
+      "id": "insights"
     }
-  ]
+  ],
+  "ui": {
+    "result.title": "Insights"
+  }
 }

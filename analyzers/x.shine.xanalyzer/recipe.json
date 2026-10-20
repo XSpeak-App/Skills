@@ -10,10 +10,10 @@
   "steps": [
     {
       "id": "analyze",
-      "ui": {
-        "result.title": "Answer"
-      },
       "min.confidence": 2
     }
-  ]
+  ],
+  "ui": {
+    "result.title": "Answer"
+  }
 }

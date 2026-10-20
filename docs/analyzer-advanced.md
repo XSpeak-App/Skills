@@ -84,15 +84,15 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
   "steps": [
     {
       "id": "<step.id>",
-      "ui": { // optional
-        "result.title": "<result-title>", // optional
-        "details.title": "<details-title>", // optional
-      },
       "min.confidence": "<int 1-10>" // optional
     },
     // ...
     // other steps
   ],
+  "ui": { // optional
+    "result.title": "<result-title>", // optional
+    "details.title": "<details-title>", // optional
+  },
   "verification": true // or false, optional (default false) controls the verify gate, see "Verification"
 }
 ```

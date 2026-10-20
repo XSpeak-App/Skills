@@ -11,10 +11,10 @@
   },
   "steps": [
     {
-      "id": "summary",
-      "ui": {
-        "result.title": "Summary"
-      }
+      "id": "summary"
     }
-  ]
+  ],
+  "ui": {
+    "result.title": "Summary"
+  }
 }

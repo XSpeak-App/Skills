@@ -9,10 +9,10 @@
   },
   "steps": [
     {
-      "id": "analyze",
-      "ui": {
-        "result.title": "To consider"
-      }
+      "id": "analyze"
     }
-  ]
+  ],
+  "ui": {
+    "result.title": "To consider"
+  }
 }
