@@ -10,8 +10,8 @@ This guide builds on the simple analyzer from [analyzer-basics.md](analyzer-basi
 - **control how much of the transcript** it analyzes (`context` in `recipe.json`, see Context)
 - **shape its output** beyond the required `result` with `title`, `details`, `confidence`, and `quote` (see Step output)
 - **stop the pipeline** when the model's confidence is too low (`min.confidence` per step, see Step output)
-- **verify the final result** before it is shown (`verification`, see Verification)
-- **aggregate full-context analysis** into a single result (`/aggregate`, see Aggregation)
+- **verify the final result** before it is shown (`verification` in the `live` section, see Verification)
+- **aggregate full-context analysis** into a single result (`on-demand/aggregate`, see Aggregation)
 
 ## Multi-step pipeline
 
@@ -19,15 +19,15 @@ The `steps` array in `recipe.json` defines the pipeline. Each step gets a direct
 
 ## Context
 
-The `context` object in `recipe.json` controls how much of the transcript the pipeline sees:
+The `context` object controls how much of the transcript the pipeline sees. It is set per mode: in the `on-demand` section for on-demand analysis and in the `live` section for live analysis.
 
-- `full`: the whole conversation. It is processed in consecutive parts, so each step's `/aggregate` directory is required.
-- `max`: the default.
-- `latest`: only the last N statements, where N is `statements`.
+- `full` (on-demand only): the whole conversation. It is processed in consecutive parts, so each step's `on-demand/aggregate/` directory is required.
+- `max`: the default for on-demand analysis.
+- `latest`: only the last N statements, where N is `statements`. The default for live analysis, with 20 statements.
 
 ## Aggregation
 
-With `full` context, each step has an `/aggregate` directory with `system.md` and `user.md`. The aggregator receives the outputs of the consecutive parts as `{{json}}` (see Aggregator parameters) and produces a single combined result for the whole conversation.
+Aggregation is supported only by on-demand analysis. With `full` context, each step has an `on-demand/aggregate/` directory with `system.md` and `user.md`. The aggregator receives the outputs of the consecutive parts as `{{json}}` (see Aggregator parameters) and produces a single combined result for the whole conversation.
 
 ## File Layout
 
@@ -37,29 +37,35 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
     recipe.json
     <language>/           // only English supported so far
         step-1-id/
-            system.md
-            user.md
-            result.md
-            title.md       (optional)
-            details.md     (optional)
-            confidence.md  (optional)
-            quote.md       (optional)
-            aggregate/     (optional, required with full context)
+            core/
                 system.md
                 user.md
+                result.md
+            on-demand/
+                title.md       (optional)
+                aggregate/     (optional, required with full context)
+                    system.md
+                    user.md
+            live/
+                details.md     (optional)
+                confidence.md  (optional)
+                quote.md       (optional)
         step-2-id/
-            system.md
-            user.md
-            result.md
-            title.md       (optional)
-            details.md     (optional)
-            confidence.md  (optional)
-            quote.md       (optional)
-            aggregate/     (optional, required with full context)
+            core/
                 system.md
                 user.md
+                result.md
+            on-demand/
+                title.md       (optional)
+                aggregate/     (optional, required with full context)
+                    system.md
+                    user.md
+            live/
+                details.md     (optional)
+                confidence.md  (optional)
+                quote.md       (optional)
         ...
-        verify/            (only if verification: true)
+        verify/            (only if verification is specified in recipe.json)
             question.md
 ```
 
@@ -72,35 +78,42 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
   "kit-version": "<int>", // the version of the XSpeak Skills Kit (the internal engine that uses skills)
   "version": "<int>", // the version of this skill
   "name": "<skill-name>", // used in the AI Actions popup 
-  "description": "<skill-description>", // optional, describes what skill is for 
+  "description": "<skill-description>", // optional, describes what skill is for
   "modes": [
     "request",
     "live"
   ], // optional, default both
-  "context": {
-    "transcript": "<full|max|latest>",
-    "statements": "<int>" // only for latest, number of statements to take from transcript
-  }, // optional, by default max
+  "on-demand": { // describes how on-demand analyzer must work, optional
+    "context": {
+      "transcript": "<full|max|latest>",
+      "statements": "<int>" // only for latest, number of statements to take from transcript
+    }, // optional, by default max
+    "ui": { // optional, describes how the user interface look for on-demand analysis results
+      "result.title": "<result-title>", // optional
+    },
+  },
+  "live": { // describes how live analyzer must work, optional
+    "context": {
+      "transcript": "<max|latest>",
+      "statements": "<int>" // only for latest, number of statements to take from transcript
+    }, // optional, by default latest with 20 statements
+    "verification": { // optional, no verification if omitted
+      "models": "<models-set|all>", // models-set means specific models, all means all models
+      "model.ids": [
+        "afm",
+        "qwen-3-4b",
+        "openai-compatible"
+      ] // optional, required only when models is set to "models-set"
+    } // optional, controls the verify gate, see "Verification"
+  },
   "steps": [
     {
       "id": "<step.id>",
-      "min.confidence": "<int 1-10>" // optional
+      "min.confidence": "<int 1-10>" // optional, used only for live analysis
     },
     // ...
     // other steps
   ],
-  "ui": { // optional
-    "result.title": "<result-title>", // optional
-    "details.title": "<details-title>", // optional
-  },
-  "verification": { // optional, no verification if omitted
-    "models": "<models-set|all>", // models-set means specific models, all means all models
-    "models.ids": [
-      "afm",
-      "qwen-3-4b",
-      "openai-compatible"
-    ] // optional, required only when models is set to "models-set"
-  } // optional, controls the verify gate, see "Verification"
 }
 ```
 
@@ -113,22 +126,23 @@ Every step outputs a JSON object with maximum five fields:
 - `quote` (optional): the criteria for the quote from transcript for the model to pick to illustrate its result.
 
 ### Output structure description
-Each regular step directory contains a mandatory `result.md` and other optional files, each describing the content of one field:
-- `result.md`: what to put into `result` (required)
-- `title.md`: what to put into `title` (optional)
-- `details.md`: what to put into `details` (optional)
-- `confidence.md`: what the 1–10 scale means for this step (optional)
-- `quote.md`: the criteria for the quote from transcript for the model to pick to illustrate its result (optional).
+Each step directory contains a mandatory `core/result.md` and other optional files each describing the content of one field:
+- `core/result.md`: what to put into `result` (required)
+- `on-demand/title.md`: what to put into `title` (optional)
+- `live/details.md`: what to put into `details` (optional)
+- `live/confidence.md`: what the 1–10 scale means for this step (optional)
+- `live/quote.md`: the criteria for the quote from transcript for the model to pick to illustrate its result (optional).
 
 These files are **instructions to the model, not the output itself**.
 
 XSpeak produces the output contract from them and appends it to the step's system prompt.
 
 ## Verification
-Optional gate controlled by the `verification` flag in `recipe.json`. It is not part of `steps`: the host runs it after all steps have completed.
+Optional gate for live analysis, controlled by the `verification` object in the `live` section of `recipe.json`. It is not part of `steps`: the host runs it after all steps have completed.
 It decides whether the output of the last step is taken as the final result of the pipeline.
 
-- Runs only when `verification: true`, the `verify/` directory is then required and contains exactly one file, `question.md`.
+- Runs only when `verification` is specified in the `live` section. The `verify/` directory is then required and contains exactly one file, `question.md`.
+- Can be enabled for all models (`"models": "all"`) or only for a specific set (`"models": "models-set"` with `model.ids` listing the models).
 - Gates the output of the last step.
 - `question.md` is the entire prompt for the step and may reference the gated step's output (e.g. `{{step.transform.result}}`, `{{conversation.transcript}}` and `{{conversation.context.conversation.type}}`).
 

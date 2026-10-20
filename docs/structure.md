@@ -5,6 +5,12 @@
     analyzers/
         index.json
         <id>.xanalyzer/   // one folder per analyzer, e.g. x.summary.request.xanalyzer
+            recipe.json
+            <language>/   // only English (en) supported so far
+                <step-id>/
+                    core/        // core prompts, required
+                    on-demand/   // specifications for on-demand analysis, required to appear in AI Actions
+                    live/        // specifications for live analysis, required to appear in Real-Time Insights
 ```
 
 ## index.json

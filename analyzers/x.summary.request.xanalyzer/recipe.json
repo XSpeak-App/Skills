@@ -6,15 +6,17 @@
   "modes": [
     "request"
   ],
-  "context": {
-    "transcript": "full"
+  "on-demand": {
+    "context": {
+      "transcript": "full"
+    },
+    "ui": {
+      "result.title": "Summary"
+    }
   },
   "steps": [
     {
       "id": "summary"
     }
-  ],
-  "ui": {
-    "result.title": "Summary"
-  }
+  ]
 }

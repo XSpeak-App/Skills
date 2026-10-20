@@ -6,15 +6,17 @@
   "modes": [
     "request"
   ],
-  "context": {
-    "transcript": "full"
+  "on-demand": {
+    "context": {
+      "transcript": "full"
+    },
+    "ui": {
+      "result.title": "Action Items"
+    }
   },
   "steps": [
     {
       "id": "analyze"
     }
-  ],
-  "ui": {
-    "result.title": "Action Items"
-  }
+  ]
 }

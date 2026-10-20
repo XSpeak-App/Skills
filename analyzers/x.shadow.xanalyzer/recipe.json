@@ -3,16 +3,24 @@
   "version": 1,
   "name": "Shadow",
   "description": "Suggests what to say",
-  "context": {
-    "transcript": "latest",
-    "statements": 50
+  "on-demand": {
+    "context": {
+      "transcript": "latest",
+      "statements": 20
+    },
+    "ui": {
+      "result.title": "To consider"
+    }
+  },
+  "live": {
+    "context": {
+      "transcript": "latest",
+      "statements": 50
+    }
   },
   "steps": [
     {
       "id": "analyze"
     }
-  ],
-  "ui": {
-    "result.title": "To consider"
-  }
+  ]
 }

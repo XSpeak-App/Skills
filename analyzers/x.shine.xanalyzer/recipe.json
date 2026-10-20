@@ -3,17 +3,19 @@
   "version": 1,
   "name": "Shine",
   "description": "Helps you look smart and answer questions",
-  "context": {
-    "transcript": "latest",
-    "statements": 20
+  "on-demand": {
+    "context": {
+      "transcript": "latest",
+      "statements": 20
+    },
+    "ui": {
+      "result.title": "Answer"
+    }
   },
   "steps": [
     {
       "id": "analyze",
       "min.confidence": 2
     }
-  ],
-  "ui": {
-    "result.title": "Answer"
-  }
+  ]
 }

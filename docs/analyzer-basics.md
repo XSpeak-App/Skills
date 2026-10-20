@@ -33,11 +33,11 @@ The minimum recipe, with a single step:
 
 - `kit-version`, `version`, `name`, and `steps` (with each step's `id`) are required.
 - `name` is shown in the AI Actions popup.
-- `description`, `modes`, `context`, `verification`, and per-step `ui` / `min.confidence` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
+- `description`, `modes`, the `on-demand` and `live` sections, and per-step `min.confidence` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
 
 ## 3. Add the step prompt files
 
-Create a directory named after the step id under the language directory, `en/my-step/` (only English is supported so far), and add three files:
+Create a directory named after the step id under the language directory, `en/my-step/core` (only English is supported so far), and add three files:
 
 - `system.md`: the model's instructions: its role and how it should behave.
 - `user.md`: the user prompt, typically contains `{{conversation.transcript}}`.
