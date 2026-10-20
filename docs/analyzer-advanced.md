@@ -142,7 +142,22 @@ Optional gate for live analysis, controlled by the `verification` object in the 
 It decides whether the output of the last step is taken as the final result of the pipeline.
 
 - Runs only when `verification` is specified in the `live` section. The `verify/` directory is then required and contains exactly one file, `question.md`.
-- Can be enabled for all models (`"models": "all"`) or only for a specific set (`"models": "models-set"` with `model.ids` listing the models).
+- Can be enabled for all models (`"models": "all"`) or only for a specific set (`"models": "models-set"` with `model.ids` listing the models). The available model ids:
+  - `afm`
+  - `openai-compatible`
+  - `qwen-3-4b`
+  - `qwen-3-8b`
+  - `qwen-3-14b`
+  - `qwen-3.5-4b`
+  - `qwen-3.5-9b`
+  - `qwen-3.5-27b`
+  - `qwen-3.6-27b`
+  - `qwen-3.8-27b`
+  - `qwen-3.5-35b-a3b`
+  - `qwen-3.6-35b-a3b`
+  - `gemma-4-e2b`
+  - `gemma-4-e4b`
+  - `gemma-4-12b`
 - Gates the output of the last step.
 - `question.md` is the entire prompt for the step and may reference the gated step's output (e.g. `{{step.transform.result}}`, `{{conversation.transcript}}` and `{{conversation.context.conversation.type}}`).
 
