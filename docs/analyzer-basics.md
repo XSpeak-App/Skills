@@ -52,7 +52,7 @@ Add its id to the `ids` array in `analyzers/index.json`:
 ```json
 {
   "ids": [
-    "summary.request",
+    "x.summary.request",
     "my.analyzer"
   ]
 }
@@ -60,4 +60,4 @@ Add its id to the `ids` array in `analyzers/index.json`:
 
 ## Example
 
-The `summary.request` analyzer in this repository is a minimal single-step analyzer. It's a good reference when creating your own. To build on it with multiple steps, full context and verification see [Creating an advanced analyzer](analyzer-advanced.md).
+The `x.summary.request` analyzer in this repository is a minimal single-step analyzer. It's a good reference when creating your own. To build on it with multiple steps, full context and verification see [Creating an advanced analyzer](analyzer-advanced.md).

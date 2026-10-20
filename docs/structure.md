@@ -4,7 +4,7 @@
 <root>/
     analyzers/
         index.json
-        <id>.xanalyzer/   // one folder per analyzer, e.g. summary.request.xanalyzer
+        <id>.xanalyzer/   // one folder per analyzer, e.g. x.summary.request.xanalyzer
 ```
 
 ## index.json
@@ -14,7 +14,7 @@
 ```json
 {
   "ids": [
-    "summary.request"
+    "x.summary.request"
   ]
 }
 ```
