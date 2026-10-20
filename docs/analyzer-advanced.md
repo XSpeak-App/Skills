@@ -93,7 +93,14 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
     "result.title": "<result-title>", // optional
     "details.title": "<details-title>", // optional
   },
-  "verification": true // or false, optional (default false) controls the verify gate, see "Verification"
+  "verification": { // optional, no verification if omitted
+    "models": "<models-set|all>", // models-set means specific models, all means all models
+    "models.ids": [
+      "afm",
+      "qwen-3-4b",
+      "openai-compatible"
+    ] // optional, required only when models is set to "models-set"
+  } // optional, controls the verify gate, see "Verification"
 }
 ```
 
