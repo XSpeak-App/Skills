@@ -11,6 +11,12 @@
   "live": {
     "context": {
       "transcript": "max"
+    },
+    "verification": {
+      "models": "models-set",
+      "model.ids": [
+        "afm"
+      ]
     }
   },
   "steps": [
