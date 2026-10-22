@@ -66,7 +66,8 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
                 quote.md       (optional)
         ...
         verify/            (only if verification is specified in recipe.json)
-            question.md
+            system.md
+            user.md
 ```
 
 ## Schemas
@@ -141,7 +142,7 @@ XSpeak produces the output contract from them and appends it to the step's syste
 Optional gate for live analysis, controlled by the `verification` object in the `live` section of `recipe.json`. It is not part of `steps`: the host runs it after all steps have completed.
 It decides whether the output of the last step is taken as the final result of the pipeline.
 
-- Runs only when `verification` is specified in the `live` section. The `verify/` directory is then required and contains exactly one file, `question.md`.
+- Runs only when `verification` is specified in the `live` section. The `verify/` directory is then required and contains exactly two files: `system.md` and `user.md`.
 - Can be enabled for all models (`"models": "all"`) or only for a specific set (`"models": "models-set"` with `model.ids` listing the models). The available model ids:
   - `afm`
   - `openai-compatible`
@@ -159,7 +160,7 @@ It decides whether the output of the last step is taken as the final result of t
   - `gemma-4-e4b`
   - `gemma-4-12b`
 - Gates the output of the last step.
-- `question.md` is the entire prompt for the step and may reference the gated step's output (e.g. `{{step.transform.result}}`, `{{conversation.transcript}}` and `{{conversation.context.conversation.type}}`).
+- The prompt consists of `system.md` and `user.md`: the system prompt describes what exactly the model answers true or false to, and the user prompt is the question to answer with true or false. Both files are instructions to the model, not the output itself, and may reference the same parameters.
 
 ## Parameters
 These are the parameters you can use in your prompts:
