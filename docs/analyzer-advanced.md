@@ -169,11 +169,13 @@ These are the parameters you can use in your prompts:
 - `{{step.<step_id>.result}}`
 - `{{step.<step_id>.details}}`
 - `{{step.<step_id>.confidence}}`
+- `{{step.<step_id>.quote}}`
 - `{{history.last.json}}`
 - `{{history.last.title}}`
 - `{{history.last.result}}`
 - `{{history.last.details}}`
 - `{{history.last.confidence}}`
+- `{{history.last.quote}}`
 - `{{conversation.transcript}}`
 - `{{conversation.spoken.language}}`
 - `{{conversation.transcript.language}}`

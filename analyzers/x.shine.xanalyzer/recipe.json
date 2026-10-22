@@ -12,6 +12,14 @@
       "result.title": "Answer"
     }
   },
+  "live": {
+    "verification": {
+      "models": "models-set",
+      "model.ids": [
+        "afm"
+      ]
+    }
+  },
   "steps": [
     {
       "id": "analyze",
