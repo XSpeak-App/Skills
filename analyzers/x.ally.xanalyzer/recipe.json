@@ -5,6 +5,7 @@
   "description": "Tells you what in the conversation is in your interest: risks, problems, and opportunities.",
   "on-demand": {
     "ui": {
+      "action.name": "Support",
       "result.title": "Insights"
     }
   },
@@ -17,6 +18,9 @@
       "model.ids": [
         "afm"
       ]
+    },
+    "ui": {
+      "skill.name": "Support"
     }
   },
   "steps": [

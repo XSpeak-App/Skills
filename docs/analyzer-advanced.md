@@ -89,7 +89,8 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
       "transcript": "<full|max|latest>",
       "statements": "<int>" // only for latest, number of statements to take from transcript
     }, // optional, by default max
-    "ui": { // optional, describes how the user interface look for on-demand analysis results
+    "ui": { // optional, describes how the user interface look for on-demand analysis
+      "action.name": "<action-name>", // optional, the name of the action in the AI Actions popup, by default name
       "result.title": "<result-title>", // optional
     },
   },
@@ -105,7 +106,10 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
         "qwen-3-4b",
         "openai-compatible"
       ] // optional, required only when models is set to "models-set"
-    } // optional, controls the verify gate, see "Verification"
+    }, // optional, controls the verify gate, see "Verification"
+    "ui": { // optional, describes how the user interface look for live analysis
+      "skill.name": "<skill-name>" // optional, the name of the skill in the Real-Time Insights panel, by default name
+    }
   },
   "steps": [
     {

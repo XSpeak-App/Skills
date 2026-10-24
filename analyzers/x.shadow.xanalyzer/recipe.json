@@ -9,6 +9,7 @@
       "statements": 20
     },
     "ui": {
+      "action.name": "Suggestion",
       "result.title": "To consider"
     }
   },
@@ -16,6 +17,9 @@
     "context": {
       "transcript": "latest",
       "statements": 50
+    },
+    "ui": {
+      "skill.name": "Suggestions"
     }
   },
   "steps": [

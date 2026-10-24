@@ -9,6 +9,7 @@
       "statements": 20
     },
     "ui": {
+      "action.name": "Answer",
       "result.title": "Answer"
     }
   },
@@ -18,6 +19,9 @@
       "model.ids": [
         "afm"
       ]
+    },
+    "ui": {
+      "skill.name": "Answers"
     }
   },
   "steps": [

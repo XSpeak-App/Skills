@@ -11,7 +11,7 @@ An analyzer can run in two places:
 An analyzer declares which of the two it supports in the `modes` field of `recipe.json`: `"request"`, `"live"`, or both (the default).
 
 Configuration and prompts are separated per mode:
-- `recipe.json` holds separate `on-demand` and `live` sections, each with its own settings (for example, `context` and `ui` for on-demand analysis, `context` and `verification` for live analysis).
+- `recipe.json` holds separate `on-demand` and `live` sections, each with its own settings (for example, `context` and `ui` in both sections, and `verification` for live analysis).
 - Each step's prompts are split across folders: `core/` (shared by both modes, required), `on-demand/` (used when the analyzer runs in AI Actions), and `live/` (used when it runs in the Real-Time Insights panel).
 
 ## How it works
