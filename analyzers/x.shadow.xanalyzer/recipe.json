@@ -16,7 +16,7 @@
   "live": {
     "context": {
       "transcript": "latest",
-      "statements": 50
+      "statements": 20
     },
     "ui": {
       "skill.name": "Suggestions"
