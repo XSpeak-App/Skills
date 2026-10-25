@@ -6,7 +6,7 @@
   "on-demand": {
     "context": {
       "transcript": "latest",
-      "statements": 20
+      "statements": 10
     },
     "ui": {
       "action.name": "Suggestion",
@@ -16,7 +16,7 @@
   "live": {
     "context": {
       "transcript": "latest",
-      "statements": 20
+      "statements": 10
     },
     "ui": {
       "skill.name": "Suggestions"
