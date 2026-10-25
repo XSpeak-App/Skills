@@ -7,11 +7,16 @@
     "ui": {
       "action.name": "Support",
       "result.title": "Insights"
+    },
+    "context": {
+      "transcript": "latest",
+      "statements": 30
     }
   },
   "live": {
     "context": {
-      "transcript": "max"
+      "transcript": "latest",
+      "statements": 10
     },
     "verification": {
       "models": "models-set",
