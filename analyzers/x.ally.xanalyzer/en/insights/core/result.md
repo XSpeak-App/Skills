@@ -1,1 +1,1 @@
-One item per line: a point in the dialogue that affects my position, a risk, a problem, or an opportunity. Each item must be grounded in a specific statement from the dialogue. If nothing in the dialogue affects my position, say so briefly.
+The single point you found directly to me. One or two short sentences, grounded in a specific statement from the dialogue.
