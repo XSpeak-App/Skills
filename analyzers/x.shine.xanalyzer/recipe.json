@@ -10,6 +10,7 @@
     },
     "ui": {
       "action.name": "Answer",
+      "action.image": "eyeglasses",
       "result.title": "Answer"
     }
   },

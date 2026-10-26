@@ -11,6 +11,7 @@
       "transcript": "full"
     },
     "ui": {
+      "action.image": "checklist",
       "result.title": "Action Items"
     }
   },

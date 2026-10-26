@@ -11,6 +11,7 @@
       "transcript": "full"
     },
     "ui": {
+      "action.image": "doc.text",
       "result.title": "Summary"
     }
   },

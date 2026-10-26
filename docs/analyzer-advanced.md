@@ -91,6 +91,7 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
     }, // optional, by default max
     "ui": { // optional, describes how the user interface look for on-demand analysis
       "action.name": "<action-name>", // optional, the name of the action in the AI Actions popup, by default name
+      "action.image": "<symbol-name>", // optional, the name of a symbol from SF Symbols, the icon of the action in the AI Actions popup
       "result.title": "<result-title>", // optional
     },
   },

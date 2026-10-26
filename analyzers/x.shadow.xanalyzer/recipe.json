@@ -10,6 +10,7 @@
     },
     "ui": {
       "action.name": "Suggestion",
+      "action.image": "quote.bubble",
       "result.title": "To consider"
     }
   },

@@ -6,6 +6,7 @@
   "on-demand": {
     "ui": {
       "action.name": "Support",
+      "action.image": "shield",
       "result.title": "Insights"
     },
     "context": {
