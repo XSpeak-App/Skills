@@ -10,6 +10,7 @@ This guide builds on the simple analyzer from [analyzer-basics.md](analyzer-basi
 - **control how much of the transcript** it analyzes (`context` in `recipe.json`, see Context)
 - **redact the user's own statements** from the transcript a step sees (`mask.user` per step, see Schemas)
 - **gate live analysis** on the statement sources present in the transcript (`live/requirements`, see Schemas)
+- **trigger live analysis** when a phrase appears in the latest statement (`live/trigger`, see Schemas)
 - **shape its output** beyond the required `result` with `title`, `details`, `confidence`, and `quote` (see Step output)
 - **stop the pipeline** when the model's confidence is too low (`min.confidence` per step, see Step output)
 - **verify the final result** before it is shown (`verification` in the `live` section, see Verification)
@@ -106,6 +107,9 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
       "user.statements", // the user's own statements
       "other.statements" // the other party's statements
     ],
+    "trigger": { // optional, condition that must be met for live analysis to run (currently a phrase trigger, extensible to other types)
+      "phrase": "<phrase>" // run only when this phrase appears in the latest incoming statement, otherwise stay quiet
+    },
     "verification": { // optional, no verification if omitted
       "models": "<models-set|all>", // models-set means specific models, all means all models
       "model.ids": [
