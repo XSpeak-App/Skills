@@ -31,7 +31,8 @@
   },
   "steps": [
     {
-      "id": "insights"
+      "id": "insights",
+      "mask.user": true
     }
   ]
 }

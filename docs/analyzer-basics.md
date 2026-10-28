@@ -33,7 +33,7 @@ The minimum recipe, with a single step:
 
 - `kit-version`, `version`, `name`, and `steps` (with each step's `id`) are required.
 - `name` is shown in the AI Actions popup.
-- `description`, `modes`, the `on-demand` and `live` sections, and per-step `min.confidence` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
+- `description`, `modes`, the `on-demand` and `live` sections, and per-step `min.confidence` and `mask.user` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
 
 ## 3. Add the step prompt files
 

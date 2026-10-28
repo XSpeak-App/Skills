@@ -28,7 +28,8 @@
   "steps": [
     {
       "id": "analyze",
-      "min.confidence": 2
+      "min.confidence": 2,
+      "mask.user": true
     }
   ]
 }
