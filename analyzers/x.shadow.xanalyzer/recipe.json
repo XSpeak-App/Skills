@@ -3,7 +3,7 @@
   "version": 1,
   "name": "Shadow",
   "description": "Suggests what to say or do in response to the latest statements, in your interest",
-  "on-demand": {
+  "manual": {
     "context": {
       "transcript": "latest",
       "statements": 10

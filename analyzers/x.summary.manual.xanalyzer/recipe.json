@@ -4,9 +4,9 @@
   "name": "Summary",
   "description": "Computes summary of the conversation",
   "modes": [
-    "request"
+    "manual"
   ],
-  "on-demand": {
+  "manual": {
     "context": {
       "transcript": "full"
     },

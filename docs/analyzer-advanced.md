@@ -14,7 +14,7 @@ This guide builds on the simple analyzer from [analyzer-basics.md](analyzer-basi
 - **shape its output** beyond the required `result` with `title`, `details`, `confidence`, and `quote` (see Step output)
 - **stop the pipeline** when the model's confidence is too low (`min.confidence` per step, see Step output)
 - **verify the final result** before it is shown (`verification` in the `live` section, see Verification)
-- **aggregate full-context analysis** into a single result (`on-demand/aggregate`, see Aggregation)
+- **aggregate full-context analysis** into a single result (`manual/aggregate`, see Aggregation)
 
 ## Multi-step pipeline
 
@@ -22,15 +22,15 @@ The `steps` array in `recipe.json` defines the pipeline. Each step gets a direct
 
 ## Context
 
-The `context` object controls how much of the transcript the pipeline sees. It is set per mode: in the `on-demand` section for on-demand analysis and in the `live` section for live analysis.
+The `context` object controls how much of the transcript the pipeline sees. It is set per mode: in the `manual` section for manual analysis and in the `live` section for live analysis.
 
-- `full` (on-demand only): the whole conversation. It is processed in consecutive parts, so each step's `on-demand/aggregate/` directory is required.
-- `max`: the default for on-demand analysis.
+- `full` (manual only): the whole conversation. It is processed in consecutive parts, so each step's `manual/aggregate/` directory is required.
+- `max`: the default for manual analysis.
 - `latest`: only the last N statements, where N is `statements`. The default for live analysis, with 20 statements.
 
 ## Aggregation
 
-Aggregation is supported only by on-demand analysis. With `full` context, each step has an `on-demand/aggregate/` directory with `system.md` and `user.md`. The aggregator receives the outputs of the consecutive parts as `{{json}}` (see Aggregator parameters) and produces a single combined result for the whole conversation.
+Aggregation is supported only by manual analysis. With `full` context, each step has a `manual/aggregate/` directory with `system.md` and `user.md`. The aggregator receives the outputs of the consecutive parts as `{{json}}` (see Aggregator parameters) and produces a single combined result for the whole conversation.
 
 ## File Layout
 
@@ -44,7 +44,7 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
                 system.md
                 user.md
                 result.md
-            on-demand/
+            manual/
                 title.md       (optional)
                 aggregate/     (optional, required with full context)
                     system.md
@@ -58,7 +58,7 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
                 system.md
                 user.md
                 result.md
-            on-demand/
+            manual/
                 title.md       (optional)
                 aggregate/     (optional, required with full context)
                     system.md
@@ -84,15 +84,15 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
   "name": "<skill-name>", // used in the AI Actions popup 
   "description": "<skill-description>", // optional, describes what skill is for
   "modes": [
-    "request",
+    "manual",
     "live"
   ], // optional, default both
-  "on-demand": { // describes how on-demand analyzer must work, optional
+  "manual": { // describes how manual analyzer must work, optional
     "context": {
       "transcript": "<full|max|latest>",
       "statements": "<int>" // only for latest, number of statements to take from transcript
     }, // optional, by default max
-    "ui": { // optional, describes how the user interface look for on-demand analysis
+    "ui": { // optional, describes how the user interface look for manual analysis
       "action.name": "<action-name>", // optional, the name of the action in the AI Actions popup, by default name
       "action.image": "<symbol-name>", // optional, the name of a symbol from SF Symbols, the icon of the action in the AI Actions popup
       "result.title": "<result-title>", // optional
@@ -145,7 +145,7 @@ Every step outputs a JSON object with maximum five fields:
 ### Output structure description
 Each step directory contains a mandatory `core/result.md` and other optional files each describing the content of one field:
 - `core/result.md`: what to put into `result` (required)
-- `on-demand/title.md`: what to put into `title` (optional)
+- `manual/title.md`: what to put into `title` (optional)
 - `live/details.md`: what to put into `details` (optional)
 - `live/confidence.md`: what the 1–10 scale means for this step (optional)
 - `live/quote.md`: the criteria for the quote from transcript for the model to pick to illustrate its result (optional).

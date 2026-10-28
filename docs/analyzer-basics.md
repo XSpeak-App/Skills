@@ -33,7 +33,7 @@ The minimum recipe, with a single step:
 
 - `kit-version`, `version`, `name`, and `steps` (with each step's `id`) are required.
 - `name` is shown in the AI Actions popup.
-- `description`, `modes`, the `on-demand` and `live` sections, and per-step `min.confidence` and `mask.user` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
+- `description`, `modes`, the `manual` and `live` sections, and per-step `min.confidence` and `mask.user` are optional. See the Schemas section of [analyzer-advanced.md](analyzer-advanced.md).
 
 ## 3. Add the step prompt files
 
@@ -52,7 +52,7 @@ Add its id to the `ids` array in `analyzers/index.json`:
 ```json
 {
   "ids": [
-    "x.summary.request",
+    "x.summary.manual",
     "my.analyzer"
   ]
 }
@@ -60,4 +60,4 @@ Add its id to the `ids` array in `analyzers/index.json`:
 
 ## Example
 
-The `x.summary.request` analyzer in this repository is a minimal single-step analyzer. It's a good reference when creating your own. To build on it with multiple steps, full context and verification see [Creating an advanced analyzer](analyzer-advanced.md).
+The `x.summary.manual` analyzer in this repository is a minimal single-step analyzer. It's a good reference when creating your own. To build on it with multiple steps, full context and verification see [Creating an advanced analyzer](analyzer-advanced.md).

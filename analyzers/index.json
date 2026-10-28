@@ -1,7 +1,7 @@
 {
   "ids": [
-    "x.summary.request",
-    "x.action.items.request",
+    "x.summary.manual",
+    "x.action.items.manual",
     "x.ally",
     "x.shadow",
     "x.shine"

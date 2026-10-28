@@ -4,9 +4,9 @@
   "name": "Action Items",
   "description": "Computes action items from the conversation",
   "modes": [
-    "request"
+    "manual"
   ],
-  "on-demand": {
+  "manual": {
     "context": {
       "transcript": "full"
     },
