@@ -15,6 +15,9 @@
     }
   },
   "live": {
+    "requirements": [
+      "other.statements"
+    ],
     "verification": {
       "models": "models-set",
       "model.ids": [

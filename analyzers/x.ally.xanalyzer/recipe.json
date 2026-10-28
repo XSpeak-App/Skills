@@ -19,6 +19,9 @@
       "transcript": "latest",
       "statements": 10
     },
+    "requirements": [
+      "other.statements"
+    ],
     "verification": {
       "models": "models-set",
       "model.ids": [

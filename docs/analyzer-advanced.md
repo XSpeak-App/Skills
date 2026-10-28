@@ -9,6 +9,7 @@ This guide builds on the simple analyzer from [analyzer-basics.md](analyzer-basi
 - run a pipeline of **multiple steps**, where a later step references the output of earlier ones (`steps` in `recipe.json`, see Multi-step pipeline)
 - **control how much of the transcript** it analyzes (`context` in `recipe.json`, see Context)
 - **redact the user's own statements** from the transcript a step sees (`mask.user` per step, see Schemas)
+- **gate live analysis** on the statement sources present in the transcript (`live/requirements`, see Schemas)
 - **shape its output** beyond the required `result` with `title`, `details`, `confidence`, and `quote` (see Step output)
 - **stop the pipeline** when the model's confidence is too low (`min.confidence` per step, see Step output)
 - **verify the final result** before it is shown (`verification` in the `live` section, see Verification)
@@ -101,6 +102,10 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
       "transcript": "<max|latest>",
       "statements": "<int>" // only for latest, number of statements to take from transcript
     }, // optional, by default latest with 20 statements
+    "requirements": [ // optional, the statement sources that must be present in the transcript for live analysis to run (any subset)
+      "user.statements", // the user's own statements
+      "other.statements" // the other party's statements
+    ],
     "verification": { // optional, no verification if omitted
       "models": "<models-set|all>", // models-set means specific models, all means all models
       "model.ids": [
