@@ -3,6 +3,9 @@
   "version": 1,
   "name": "Shine",
   "description": "Helps you look smart and answer questions",
+  "ui": {
+    "image": "eyeglasses"
+  },
   "manual": {
     "context": {
       "transcript": "latest",
@@ -10,7 +13,6 @@
     },
     "ui": {
       "action.name": "Answer",
-      "action.image": "eyeglasses",
       "result.title": "Answer"
     }
   },

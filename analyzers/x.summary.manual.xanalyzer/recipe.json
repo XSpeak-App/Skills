@@ -6,12 +6,14 @@
   "modes": [
     "manual"
   ],
+  "ui": {
+    "image": "doc.text"
+  },
   "manual": {
     "context": {
       "transcript": "full"
     },
     "ui": {
-      "action.image": "doc.text",
       "result.title": "Summary"
     }
   },

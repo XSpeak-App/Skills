@@ -6,12 +6,14 @@
   "modes": [
     "manual"
   ],
+  "ui": {
+    "image": "checklist"
+  },
   "manual": {
     "context": {
       "transcript": "full"
     },
     "ui": {
-      "action.image": "checklist",
       "result.title": "Action Items"
     }
   },

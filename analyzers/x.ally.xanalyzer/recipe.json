@@ -3,10 +3,12 @@
   "version": 1,
   "name": "Ally",
   "description": "Tells you what in the conversation is in your interest: risks, problems, and opportunities.",
+  "ui": {
+    "image": "shield"
+  },
   "manual": {
     "ui": {
       "action.name": "Support",
-      "action.image": "shield",
       "result.title": "Insights"
     },
     "context": {
