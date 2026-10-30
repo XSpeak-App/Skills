@@ -15,9 +15,12 @@
     }
   },
   "live": {
-    "requirements": [
-      "other.statements"
-    ],
+    "requirements": {
+      "speaker.requirements": [
+        "other.statements"
+      ],
+      "min.statements": 5
+    },
     "verification": {
       "models": "models-set",
       "model.ids": [

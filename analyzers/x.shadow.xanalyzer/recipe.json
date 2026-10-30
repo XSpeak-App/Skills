@@ -19,9 +19,12 @@
       "transcript": "latest",
       "statements": 10
     },
-    "requirements": [
-      "other.statements"
-    ],
+    "requirements": {
+      "speaker.requirements": [
+        "other.statements"
+      ],
+      "min.statements": 1
+    },
     "ui": {
       "skill.name": "Suggestions"
     }
