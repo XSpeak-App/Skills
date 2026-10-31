@@ -3,6 +3,7 @@
   "version": 1,
   "name": "Summary",
   "description": "Computes summary of the conversation",
+  "author": "XSpeak",
   "modes": [
     "manual"
   ],

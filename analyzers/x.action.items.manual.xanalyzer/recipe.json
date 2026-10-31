@@ -3,6 +3,7 @@
   "version": 1,
   "name": "Action Items",
   "description": "Computes action items from the conversation",
+  "author": "XSpeak",
   "modes": [
     "manual"
   ],

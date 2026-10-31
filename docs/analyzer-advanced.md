@@ -83,6 +83,7 @@ Analysis skills (analyzers) live under `analyzers/` (see `docs/structure.md`).
   "version": "<int>", // the version of this skill
   "name": "<skill-name>", // used in the AI Actions popup 
   "description": "<skill-description>", // optional, describes what skill is for
+  "author": "<author>", // the author of the skill
   "ui": { // optional, describes the user interface of the analyzer
     "image": "<symbol-name>" // optional, the name of a symbol from SF Symbols, the icon of the action in the AI Actions popup
   },
