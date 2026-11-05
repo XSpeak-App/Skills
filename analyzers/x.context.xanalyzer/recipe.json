@@ -2,7 +2,7 @@
   "kit-version": 1,
   "version": 1,
   "name": "Context",
-  "description": "Finds parts of the conversation that benefit from outside knowledge and provides the relevant fact or background",
+  "description": "Provides relevant facts or background.",
   "author": "XSpeak",
   "ui": {
     "image": "book"

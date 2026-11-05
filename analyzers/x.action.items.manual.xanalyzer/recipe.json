@@ -2,7 +2,7 @@
   "kit-version": 1,
   "version": 1,
   "name": "Action Items",
-  "description": "Computes action items from the conversation",
+  "description": "Computes action items.",
   "author": "XSpeak",
   "modes": [
     "manual"

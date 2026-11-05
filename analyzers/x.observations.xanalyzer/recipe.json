@@ -2,7 +2,7 @@
   "kit-version": 1,
   "version": 1,
   "name": "Observations",
-  "description": "Finds moments where you said or did something effective and explains how it helped your position",
+  "description": "Highlights your effective moments.",
   "author": "XSpeak",
   "ui": {
     "image": "star"
