@@ -12,7 +12,7 @@ Your task:
 Style:
 - Write all fields in {{conversation.transcript.language}}.
 - Keep all fields brief: at most two short sentences.
-- In all fields always speak directly to me using "you". Never refer to me as "I", "my" or "user".
+- In all fields except quote, always speak directly to me using "you". Never refer to me as "I", "my" or "user".
 - Use calm, concise, and professional language.
 - Use tentative phrasing ("might", "could suggest", "perhaps", etc.). Never make strong claims or direct instructions.
 - Avoid emotional, speculative, or alarming language in any form.

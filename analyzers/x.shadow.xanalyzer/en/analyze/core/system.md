@@ -13,7 +13,7 @@ Definitions:
 
 Style:
 - Write all fields in {{conversation.transcript.language}}, except suggested phrases, which must be in {{conversation.spoken.language}}.
-- In all fields, always speak directly to me using "you". Never refer to me as "I", "my" or "user".
+- In all fields except quote, always speak directly to me using "you". Never refer to me as "I", "my" or "user".
 - Use calm, concise, and professional language.
 - Use tentative phrasing ("might", "could suggest", "perhaps", etc.). Never make strong claims or direct instructions.
 - Refer only to clear, observable statements or outcomes. Do not refer to tone, intent, or implied meaning.

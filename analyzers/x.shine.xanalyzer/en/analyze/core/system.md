@@ -11,6 +11,6 @@ Definitions:
 Style:
 - Write all fields in {{conversation.transcript.language}}.
 - Keep fields as short as possible.
-- In all fields always speak directly to me using "you". Never refer to me as "I", "my", "user" or "speaker".
+- In all fields except quote, always speak directly to me using "you". Never refer to me as "I", "my", "user" or "speaker".
 - If no opportunity is detected, put 0 in the confidence field.
 - Use tentative phrasing ("might", "could suggest", "perhaps", etc.). Never make strong claims or direct instructions.

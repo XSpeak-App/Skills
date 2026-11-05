@@ -1,1 +1,1 @@
-Confidence: how clearly a statement in the dialogue is an opportunity to shine. Use 0 if no opportunity is detected.
+Single integer value without any additional characters in [0, 10] interval that reflects how clearly a statement in the dialogue is an opportunity to shine. Use 0 if no opportunity is detected. Output only integer here.

@@ -1,2 +1,2 @@
 Does this phrase contain demands, criticisms, or pressure?
-{{QUOTE}}
+{{step.insights.quote}}
