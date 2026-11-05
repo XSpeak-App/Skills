@@ -1,0 +1,1 @@
+The single most relevant external fact or piece of background knowledge that helps me understand the conversation: not directly stated in the transcript, concrete and verifiable. One or two short sentences. If no such fact is detected, leave this field empty.

@@ -5,6 +5,7 @@
     "x.ally",
     "x.shadow",
     "x.shine",
-    "x.observations"
+    "x.observations",
+    "x.context"
   ]
 }

@@ -1,0 +1,1 @@
+Pick one statement from the transcript that the fact relates to: the exact line where the topic was mentioned. Quote it verbatim, without additions. If the result reports nothing, do not pick a quote.

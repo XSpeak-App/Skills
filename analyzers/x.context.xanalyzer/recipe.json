@@ -1,0 +1,24 @@
+{
+  "kit-version": 1,
+  "version": 1,
+  "name": "Context",
+  "description": "Finds parts of the conversation that benefit from outside knowledge and provides the relevant fact or background",
+  "author": "XSpeak",
+  "ui": {
+    "image": "book"
+  },
+  "modes": [
+    "live"
+  ],
+  "live": {
+    "context": {
+      "transcript": "latest",
+      "statements": 20
+    }
+  },
+  "steps": [
+    {
+      "id": "context"
+    }
+  ]
+}
