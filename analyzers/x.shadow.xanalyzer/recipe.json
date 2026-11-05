@@ -2,7 +2,7 @@
   "kit-version": 1,
   "version": 1,
   "name": "Shadow",
-  "description": "Suggests what to say.",
+  "description": "Suggests what to say",
   "author": "XSpeak",
   "ui": {
     "image": "quote.bubble"

@@ -2,7 +2,7 @@
   "kit-version": 1,
   "version": 1,
   "name": "Ally",
-  "description": "Flags potential risks, problems, and opportunities.",
+  "description": "Flags potential risks, problems, and opportunities",
   "author": "XSpeak",
   "ui": {
     "image": "shield"
