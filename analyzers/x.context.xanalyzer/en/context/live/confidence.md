@@ -1,0 +1,1 @@
+Single integer value without any additional characters in [0, 10] interval that reflects how sure you are that you actually know this fact and it is not guessed, assumed, or made up. Use 0 if no such fact exists or you do not actually know it.

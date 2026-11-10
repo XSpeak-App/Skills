@@ -18,7 +18,8 @@
   },
   "steps": [
     {
-      "id": "context"
+      "id": "context",
+      "min.confidence": 4
     }
   ]
 }
